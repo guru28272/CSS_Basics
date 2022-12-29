@@ -1,0 +1,97 @@
+/* external css */
+
+/* universal selector --- 0 specificity */
+/* it changes commonly to all elements */
+*{
+    color: red;
+}
+
+/* tag-selector or type selector ---- 1 specificity--mostly used */
+h1{ 
+    color: orangered;
+}
+
+/* we can add couple or more tags also */
+h2,h3{ 
+    color: green;
+}
+
+/* #--id selector--- specificity 100 */
+#b{
+    color: brown;
+}
+
+#i{
+    color: goldenrod; 
+}
+
+/* class selector ---10 specificity---mostly used */
+.para{
+    color:aqua;
+}
+
+/* child selector */
+.yellowtxt>p{
+    color: yellow;
+}
+
+/* descendent selector---mostly used */
+div sup,sub{
+    color: blue;
+}
+
+/* adjacent sibling selector---mostly used  */ 
+h1+h2{
+    color: black;
+}
+
+/* general sibiling selector */
+h1~h6{
+    color:blue;
+}
+
+/* combination selector */
+/* orange will not change because it's specificity is ---20 */
+.spec .spec-1{  
+    color:orange;
+}
+
+/* specificity is ---11 & 2 (tag+class, tag+tag) */
+div .spec-1,a{
+    color: blueviolet;
+}
+
+.spec .spec-2{
+    color: green;
+}
+
+/* now spec-3 also changed because,before its specificity is 2,
+    now 20 */
+.spec .spec-3{
+    color:brown;
+}
+
+/* now it will change black-color because the specificity is same,
+so it takes by priority */
+div .spec-1{ 
+    color:black;
+}
+
+/* inheritance */
+.inherit-class{
+    color: grey;
+    font-size: 20px;
+}
+
+.inherit-class p{
+    color:inherit;
+    font-size: inherit;
+} 
+
+.inherit-class h1{
+    color:inherit;
+    font-size: inherit;
+}
+
+
+

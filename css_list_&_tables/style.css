@@ -1,0 +1,93 @@
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.div-1{
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    background-color: black;
+}
+.div-1 h1{
+    color: orange;
+    text-align: center;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    
+}
+
+.div-2{
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+.div-3{
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+.div-2 ul{
+    list-style-type: upper-alpha;    
+    /* list-style-position: outside; */
+    /* list-style: inside circle; */
+}
+.div-3 ol{
+    list-style-type: upper-roman;
+    /* list-style-type: upper-alpha; */
+    /* list-style-image: url(); */
+    /* list-style-type: none; */
+}
+
+ul li{
+    margin: 5px;
+}
+ol li{
+    margin: 5px;
+}
+
+.div-4{
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+}
+.div-4 table{
+    width: 600px;
+    border: 1px solid;
+
+    /* border-spacing will work when it not collapsed */
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+
+.div-4 th{
+    /* border-bottom: 1px solid; */
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+    /* border-collapse: will not work from here */
+    
+}
+
+.div-4 td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid;
+    /* border-collapse: will not work from here */
+    
+}
+
+/* descendant is also present, so it will done color by col-wise */
+/* .div-4 tr :nth-child(even){
+    background-color: orange;
+} */
+
+.div-4 tr:nth-child(even){
+    background-color: antiquewhite;
+}

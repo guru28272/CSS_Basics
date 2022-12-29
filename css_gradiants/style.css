@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    width: 150px;
+    margin: 10px;
+    color: rgb(172, 24, 24);
+    background-color: rgb(180, 108, 180);
+}
+
+/* linear-gradient */
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    
+    /* for gradiant instead of background-color use just backround */
+    /* background-color: orange; */
+
+    /* instead of backround-color */
+    /* linear--means gradually shifting from orange to red */
+    background: linear-gradient(orange, red,yellow);
+
+}
+
+/* radial-gradient */
+.box-1{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: radial-gradient(blue,yellow);
+}
+
+/* transition starts from right to left */
+.box-2{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(to left,blue,magenta,lavender);
+}
+
+/* transition starts from left to right */
+.box-3{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(to right,green,red,yellow);
+}
+
+/* transition starts from bottom to top */
+.box-4{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(to top,blue,yellow,green);
+}
+
+/* transition starts from bottom-left to top-right*/
+.box-5{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(to top right,green,yellow,red);
+}
+
+/* we can also give angles instead of TBRL,tr,bl */
+.box-6{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(210deg,blue,yellow,brown);
+}
+
+/* we can spread the domination of color by giving px,%,em, or anything to requires color */
+.box-7{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(blue 30%,red);
+}
+
+/* for solid transition in linear */
+.box-8{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: linear-gradient(blue 30%,blue,yellow 30%, yellow);
+}
+
+/* for solid transition in radial */
+.box-9{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: radial-gradient(blue 30%,blue,red 30%,red);
+}
+
+/* for repeating linear gradient */
+/* px in increasing order for perfect solid transition */
+.box-10{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: repeating-linear-gradient(blue 10px,blue 20px,yellow 10px,yellow 30px);
+}
+
+/* for repeating radial gradient */
+/* px in increasing order for perfect solid transition */
+.box-11{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+
+    background: repeating-radial-gradient(blue 10px,blue 20px,red 20px,red 30px);
+}
+
+/* for better gradients we need to use hexa-decimal values instead of direct color name */

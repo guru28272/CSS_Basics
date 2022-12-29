@@ -1,0 +1,84 @@
+
+.h1{
+    color:rgb(173, 26, 26);
+    text-transform: capitalize;
+    /* text-decoration: underline; */
+    text-align: center;
+    max-width: 1500px;
+    min-width: 700px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 5px;
+
+}
+
+.div-1{
+    /* if we give width like this, then it will be fixed
+     so,we want to make as adaptive by max-width and mi-width*/
+    /* em of width calculated by font size of element
+     % of width calulated by immediate adjacent border of parent  */
+    max-width: 1500px;
+    min-width: 700px;
+    /* max-height: 200px; */
+
+    /* if content overflow */
+    /* overflow: scroll; */
+
+    /* border: 1px solid black; */
+
+    /* we can mention border width,style,color specifically like
+     top left bottom right */
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+
+}
+.div-1 .p1, .p2{
+    /* we can specifically mention TRBL to each property */
+    font-size: 1em;
+    text-align: justify;
+    width: 20em;
+    background-color: rgba(195, 149, 65,0.5);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 40px auto 40px auto;
+
+    /* for eclipse radius 
+    for eclipse radius, we need to give -moz & -webkit to work
+    eclipse perfectly in all browsers*/
+    /* border-radius: 80px 50px;  */
+
+    /* for firefox */
+    /* -moz-border-radius:80px 50px; */
+
+    /* for chrome, safari */
+    /* -webkit-border-radius:80px 50px; */
+
+   /* box shadow */
+   /* horizonta, vertical, blur */
+   /* box-shadow: 10px 10px 10px grey; */
+
+   /* '-' --is prefix, when we give like this, then only 
+   it work perfectly in all browsers */
+   /* -moz-box-shadow: 10px 10px 10px grey; */
+
+   /* 4 is for spreading in all 4 sides 
+   we can give 'inset' before all offset values*/
+   /* -webkit-box-shadow: 10px 10px 5px 20px grey */
+
+   /* there is border img also */
+}
+
+.div-2 li{
+    /* this will set block element to inline element
+    display block will set inline to block element like 'a' tag
+    there is also inline-block */
+
+    /* this property used for nav bar creation in inline,inline-block */
+    display: inline;
+    margin: 10px;
+}

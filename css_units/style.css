@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* this is the parent for all elements */
+html{
+    font-size: 20px;
+}
+.div-1{
+    /* 1em---16px */
+    /* em---is a relative measurement fro its parent */
+    font-size: 1.5em;
+}
+.p1{
+    font-size: 2em;
+}
+.p2{
+    /* 1rem---16px */
+    /* rem---is directly relative to its root only */
+    /* rem is better choice in all aspects */
+    font-size: 2rem;
+}
+
+/* vw, vh */
+.box{
+
+    /* vw--view port width, vh--view port height */
+    /* it takes the width,height from the root only(full-screen) */
+    width: 50vw;
+    height: 50vh;
+    margin: 10px;
+    border: 2px solid;
+}
+.box-1{
+
+    /* box-1 is inside the box-0,but inside box also takes vw,vh
+        from the root only(full-screen) */
+    width: 50vw;
+    height: 50vh;
+    margin: 10px;
+    border: 2px solid;
+}
+
+/* vmin--it compares the it compares the current screen width & height,between that it takes
+    minimum value of width */
+.box-2{
+    width: 50vmin;
+    height: 50vh;
+    margin: 10px;
+    margin-top: 20px;
+    border: 2px solid;
+}
+
+/* vmax--it compares the current screen width & height,between that it takes
+    maximum value of width */
+.box-3{
+    width: 50vmax;
+    height: 50vh;
+    margin: 10px;
+    border: 2px solid;
+}
+
+/* for % */
+/* %--it takes the value of immediate volue of outside border */
+.box-4{
+    width: 50vw;
+    height: 50vh;
+    margin: 10px;
+    margin-top: 20px;
+    border: 2px solid;
+}
+.box-5{
+    
+    /* it is the inside the vw,vh box,it takes value from its parent box and it is adaptive 
+        because outside box has vw,vh in it */
+    width: 50%;
+    height: 50%;
+    padding: auto;
+    margin: auto;
+    border: 2px solid;
+    
+}
+
+.box-6{
+    
+    /* it is the outside box, */
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid;
+    
+}
+.box-7{
+    
+    /* it is the inside box,it takes value from its parent box and it is not-adaptive 
+        because outside box has no vw,vh in it */
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+    border: 2px solid;
+    
+}
+

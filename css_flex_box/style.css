@@ -1,0 +1,154 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.box{
+    /* we need to use min-height & in flex for adaptiveness */
+    min-height: 400px;
+    background-color: darkcyan;
+    display: flex;
+
+    /* wrap--is used to wrap the things,if given width is reduced,
+    it will take that element to the next line */
+    /* it handles the width value according to the screen size */
+    /* defaultly it is no-wrap */
+    flex-wrap: wrap;
+
+    /* flex-direction: column; */
+
+    /* for both rows and col; value will changes automatically when we give col
+    justify-content---main-axis */
+    /* flex-start is default */
+    justify-content: space-around;
+
+    /* align-items--cross-axis */
+    /* flex-start is default */
+    align-items: center;
+    /* align-items:strech,we dont need to give height */
+}
+.box div{
+    border: 1px solid white;
+}
+.box-1{
+    width: 150px;
+    height: 200px;
+    background-color: chocolate;
+
+    /* for self alignment */
+    /* align-self: flex-start; */
+
+    /* justify-self: flex-end; */
+
+    /* shrink--used for not to reduce the width value when we shrink,so the width value remains same
+        when we shrink the screen */
+    /* flex-shrink: 0; */
+    
+    /* it will shrink 1 time more than other element */
+    flex-shrink: 1;
+    
+}
+.box-2{
+    width: 150px;
+    height: 200px;
+    background-color: goldenrod;
+    
+    /* it takes remaining space */
+    /* flex: 1; */
+    
+    /* occupies the remaining space with respected value*/
+    /* flex-grow: 2; */
+
+    /* flex-basis:0-- is used for maintaining perfect size of the given value of felx-grow 2(double) or 1*/
+    /* we are setting the width is 0,according to that it will grow */
+    /* without the flex-basis,it will take only the remaining space according to the give value
+        and split if another element if present, but it wont give the perfect size */
+    /* flex-basis: 0; */
+
+}
+.box-3{
+    width: 150px;
+    height: 200px;
+    background-color: tomato;
+    /* align-self: flex-start; */
+    /* justify-self: flex-start; */
+
+    /* it will shrink 2 times more than other element */
+    flex-shrink: 2;
+}
+.box-4{
+    width: 150px;
+    height: 200px;
+    background-color: rgb(167, 56, 56);
+    
+    /* it takes reamaining space,if already taken by other element means,
+    then both will share the spaces */
+    /* flex: 1; */
+
+    /* flex-grow: 1; */
+    /* flex-basis: 0; */
+}
+.box-5{
+
+    /* summary */
+
+    /* we can also give flex-grow,shrink,basis */
+    /* this is actual syntax for flex*/
+    flex: 1 2 0px;
+    
+    /* it takes remaining spaces */
+    flex-grow: 1;
+    /* flex: 1; it takes reamining spaces */
+    justify-self: flex-end; 
+    align-self: flex-end;
+    
+
+}
+
+.div-1{
+    
+    /* flex-box---it is flexible box and it is adaptive */
+    /* we can change elements into flex only by parent from parent element */
+    /* flex-box will align the elements evenly but float will not do that */
+    
+    display: flex;
+    /* justify-content: space-between; */
+
+    /* flex-box defaultly make a row-wise align
+       but we can make col-wise changes also */
+    
+    /* for col-wise direction */
+    /* flex-direction: column; */
+    
+}
+p{
+    text-align: justify;
+    padding: 10px;
+    margin: 5px;
+}
+.p1{
+    background-color: rgb(161, 82, 98);
+
+    /* for un-even width in flex-box */
+    flex: 1;
+
+    /* we can change the order also */
+    order: 3;
+
+}
+.p2{
+    background-color: darkgoldenrod;
+    flex: 1;
+    order: 1;
+}
+.p3{
+    background-color: mediumseagreen;
+    flex: 1;
+
+    /* for increasing the paragraph width */
+    /* now it is increased double the width, 
+        because now we set in 1:1:2 ratio */
+    flex: 2;
+    order: 2;
+}
+

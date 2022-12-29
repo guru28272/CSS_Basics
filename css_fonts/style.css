@@ -1,0 +1,130 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+.main{
+    /* 16px is default size */
+    /* 100% is 16px
+       1em ---16px
+    1em is 16px, and it inherits from parents*/
+    font-size: 2em; 
+    letter-spacing: .5em;
+    text-align: center;
+    /* vertical align mainly used for img */
+
+}
+
+/* adjacent selector */
+h1+h1{
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+p{
+    /* body is the main root, so 1.5em is---24px
+    24*1(1em)---24px */
+    font-size: 1em;
+    font-weight: lighter;
+    line-height:1.5em;
+    text-align: justify;
+    text-indent: 1.5em;
+
+}
+
+.div-1 h1{
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.p1{
+    /* 1st---how much we want to move the shadow and 
+     which side want to move left or right, left means -,right is + */
+    /* 2nd-- top or bottom shadow*/
+    /* 3rd-- blur adjustment */
+    text-shadow: 2px 2px 2px grey;
+}
+
+/* pseudo element */
+.p1:first-letter{
+    font-size: 2em;
+    /* we can use first-line also */
+}
+/* .div-1{
+    font-size: 1.5em;
+} */
+.div-1 p{
+    /* here 24*1(1em)---48px */
+    font-size: 1em;
+    font-weight: bold;
+    font-weight: 100;
+    font-style: italic;
+
+    /* line height is distance between each lines */
+    line-height: 1.5em; 
+
+    /* justify will make the line complete */
+    text-align: justify;   
+}
+
+/* removes underline in the link */
+a{
+    text-decoration: none;
+}
+
+/* pseudo element must be in given below order only for link */
+/* for un-visited link */
+a:link{
+    color:blue;
+}
+
+/* pseudo element---for after visited the link */
+a:visited{
+    color:red;
+}
+
+/* pseudo for hover */
+a:hover{
+    color:lightsalmon;
+
+    /* it will show underline when hovering it */
+    text-decoration: underline;
+}
+
+/* used by tab key for any link or input elements without mouse
+ it focus on particular input element*/
+a:focus{
+    color: green;
+}
+
+a:active{
+    color:darkblue;
+}
+
+/* it changes all paragraph having class  */
+p[class]{
+    color:brown;
+}
+
+/* it changes the all paragraph having id's
+ and it also changes the class paragraph if that paragraph
+ having id. because id has more specificity */
+p[id]{
+    color: orange;
+}
+
+/* specific class */
+p[class="para"]{
+    color:green;
+}
+
+/* specific id */
+p[id="p3"]{
+    color:blue;
+}

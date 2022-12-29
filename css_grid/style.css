@@ -1,0 +1,179 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+body{
+    background-color: violet;
+    /* padding: 10px; */
+}
+.layout{
+    /* for grid-area method */
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+
+    /* we can easily acheive templates by using grid-area 
+    or use spanning,go-to each content class to create it*/
+    grid-template-areas: 
+    "h h h h h"
+    "sb1 m m m sb2"
+    "f f f f f";
+}
+.layout div{
+    border: 1px solid black;
+    background-color: gainsboro;
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.header{
+    /* we want to create grid-area name to make changes */
+    grid-area: h;
+}
+.sidebar{
+    grid-area: sb1;
+}
+.main{
+    grid-area: m;
+}
+.sidebar2{
+    grid-area: sb2;
+}
+.footer{
+    grid-area: f;
+}
+.numbers{
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 200px 100px;
+
+    /* to give the value of extra content to make to look continuous order */
+    grid-auto-rows: 200px 100px;
+    /* grid-auto-columns: 1fr; */
+
+    /* to make the num or any-content in col-wise, defaultly it is in row-wise*/
+    /* grid-auto-flow: column; */
+
+    /* align-item default value of grid is 'stretch' */
+    /* align-item is in row-wise and it is making content in the cell reaches the given alignment,
+        so that the height decreases */
+    /* align-items: center; */
+    
+    /* justify content in col-wise */
+    /* justify-content: end; */
+
+    /* for individual items */
+    /* default is stretch */
+    /* justify-items: stretch; */
+}
+.num{
+    background-color: lemonchiffon;
+    font-size: 30px;    
+
+    /* to make num center */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.num1{
+    /* for layout designing--spaning the content with the help of layout of the content */
+
+    /* spanning from 1st line to 3rd line */
+    /* grid-column-start: 1; */
+    /* grid-column-end: 3; */
+
+    /* we can directly given as */
+    grid-column: 1/4;
+}
+.num3{
+    grid-column: 2/4;
+}
+.num4{
+    grid-column: 1/3;
+    /* justify-self: ; */
+    /* align-self: ; */
+}
+.num13{
+    /* height: 200px; */
+    /* we can also give as 'span' also */
+    grid-column: span 3;
+}
+/* .num2{
+    grid-row: span 2;
+} */
+.num6{
+    grid-row: 4/6;
+}
+.num12{
+    grid-column: span 2;
+}
+.p{
+    padding: 10px;
+    background-color: lavender;
+    text-align: justify;
+}
+.container{
+    /* like in flex,same in grid */
+    display: grid;
+
+    /* used to specify the multi-col and specifying its individual dimension purposes in grid */
+    /* it is like a flex-grow, to make things even or double */
+    
+    /* here giving 4-col */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+   
+    /* here we are giving 3-col */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+
+    /* minmax---it is a function used for setting min and max value for particular col */
+    /* grid-template-columns: minmax(200px,1fr) 1fr 1fr; */
+
+    /* in this method 1st & 2nd col is fixed,because we given the px values, 3rd-col will take automatically  */
+    /* grid-template-columns: 200px 300px auto; */
+
+    /* repeat---this is another method of giving columns */
+    /* grid-template-columns: repeat(3,1fr); */
+
+    /* auto-fit--it is useful for auto-fit to the screen for any device without scolling */
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+    /* auto-fill--used for filling the elements */
+    /* we can visible the difference in less paragraphs */
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+
+    grid-template-rows: 25% 35% 25%;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: repeat(auto-fit,minmax(300px,1fr)); */
+
+    /* column-gap: 20px; */
+    /* row-gap: 20px; */
+
+    /* we can give gap directly */
+    gap: 20px;
+
+}
+
+.container-2{
+    
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+
+    /* auto-fit--it is useful for auto-fit to the screen for any device without scolling */
+    /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+
+}
+.p1{
+
+    background-color: rgb(172, 205, 239);
+    padding: 10px;
+    text-align: justify;
+}

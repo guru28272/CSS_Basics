@@ -1,0 +1,42 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+.div-1 .p1{
+    background-color: darkkhaki;
+}
+.div-1 .p2{
+    background-color: orange;
+}
+.div-1 .p3{
+    background-color: skyblue;
+}
+
+/* we can give 'screen' , 'print', 'speech' 
+    or we can give 'all' & it is responsible for all 3 */
+/* 'all'---it works in all devices */
+/* generally 1st preference is for mobile then other devices */
+
+/* min-width---tells that if website px exceeds 801px then it will float
+    for better viewing purpose */
+/* max-width---tells that if websit px is below the given px then do this thing
+    like that for better viewing in desktop purpose. then we want to do landscape thing for desktop. */
+@media all and (min-width:801px){
+    .div-1 p{
+        /* width: 30%; */
+        width: 200px;
+        float: left;
+    }
+
+    /* this will not work due to its specificity */
+    /* .p2{
+        background-color: rgb(222, 106, 106);
+    } */
+
+    /* this will work when width is above 801px */
+    .div-1 .p2{
+        background-color: rgb(222, 106, 106);
+    }
+}
+

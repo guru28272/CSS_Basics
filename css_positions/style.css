@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* position--static */
+.blue-box{
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-color: rgb(67, 67, 161);
+    margin-top: 20px;
+
+}
+.green-box{
+    /* position---defaultly it is 'static' */
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: green;
+    /* it cant able to set offset value because it is static */
+    /* left: 20px;  */
+}
+
+/* position--relative */
+.black-box{
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    position: relative;
+}
+.white-box{
+    /* position--'relative'
+    we can set the offset(TRBL) values from its original postion or original values */
+    /* t--it goes down, b--it goes up, r--moves to left, l--move to right */
+    width: 100px;
+    height: 100px;
+    color: black;
+    background-color: chocolate;
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+}
+
+/* position--absolute */
+/* if we give parent div as 'relative' then the child div will leave some gap on top of parent 
+    maybe because of child inside div & div as a block-element*/
+/* if we give parent div as 'absolute' then the child div take full property of parent div */
+
+/* if we dont give any offset to absolute then the below element will attached to it */
+.red-box{
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-color: red;
+    margin-top: 20px;
+    position: relative;
+}
+.yellow-box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: yellowgreen;
+
+    /* position--absolute */
+    /* all the below child elements will go to the above parent elements */
+    /* absolute offset will move till it reaches to the non-static position of 'parent'(direct parent) */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+/* position--fixed */
+/* fixed is always fixed */
+.brown-box{
+    width: 330px;
+    height: 300px;
+    color: white;
+    background-color: brown;
+    margin-top: 20px;
+    position: relative;
+}
+.lightbrown-box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: rosybrown;
+    position: fixed;
+    left: 100px;
+    /* top: 300px; */
+    /* bottom: 300px; */
+    top: 0px;
+    bottom: 0px;
+
+    /* z-index is used to display the box over the hidden box 
+        it is stack-flow element*/
+    z-index: 1000;
+    
+}
+
+/* position--sticky */
+/*  it stick to its position when it touches to top */
+.orange-box{
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-color: orange;
+    margin-top: 20px;
+    position: sticky;
+    top: 0px;
+    /* bottom: 0px; */
+}
+
+
